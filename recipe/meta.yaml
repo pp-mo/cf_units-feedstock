@@ -28,6 +28,7 @@ requirements:
     - cftime
     - {{ pin_compatible('numpy') }}
     - antlr-python-runtime 4.7.2.*
+    - six  # not really needed but still listed and check by pip
 
 test:
   requires:
@@ -41,7 +42,7 @@ test:
 
 about:
   home: https://scitools.org.uk/cf-units/docs/latest/
-  license: LGPL-3.0
+  license: LGPL-3.0-or-later
   license_file: COPYING.LESSER
   summary: Units of measure as required by the Climate and Forecast (CF) metadata conventions.
 
