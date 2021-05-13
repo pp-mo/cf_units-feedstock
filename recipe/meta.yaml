@@ -1,4 +1,4 @@
-{% set version = "2.1.4" %}
+{% set version = "2.1.5" %}
 
 package:
   name: cf-units
@@ -6,11 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cf-units/cf-units-{{ version }}.tar.gz
-  sha256: 25f81ad994af30713ee8f5ef18ffddd83c6ec1ac308e1bd89d45de9d2e0f1c31
+  sha256: d43381d3ee4e3b01ceb29050ea9b5e1bba3bb28d9d5846dff71870162cbc5c33
 
 build:
-  number: 2
-  skip: true  # [win and py2k]
+  number: 0
 
 requirements:
   build:
@@ -28,8 +27,8 @@ requirements:
     - python
     - cftime
     - {{ pin_compatible('numpy') }}
-    - antlr-python-runtime 4.7.2.*  # [py3k]
-    - six
+    - antlr-python-runtime 4.7.2.*
+    - six  # not really needed but still listed and check by pip
 
 test:
   requires:
@@ -39,14 +38,11 @@ test:
     - cf_units
   commands:
     - pip check
-    - pytest --pyargs cf_units                                   # [not (win and py2k)]
-      # On win py2 we are getting an unexpected test failure. See also
-      # https://github.com/SciTools/cf-units/issues/148.
-    - pytest --pyargs cf_units -k="-test_read_xml_invalid_path"  # [win and py2k]
+    - pytest --pyargs cf_units
 
 about:
   home: https://scitools.org.uk/cf-units/docs/latest/
-  license: LGPL-3.0
+  license: LGPL-3.0-or-later
   license_file: COPYING.LESSER
   summary: Units of measure as required by the Climate and Forecast (CF) metadata conventions.
 
@@ -55,3 +51,4 @@ extra:
     - bjlittle
     - ocefpaf
     - pelson
+    - trexfeathers
