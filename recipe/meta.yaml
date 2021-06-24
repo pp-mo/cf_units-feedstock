@@ -16,7 +16,7 @@ requirements:
   build:
     - {{ compiler('c') }}
   host:
-    - python >=3.7
+    - python
     - pip
     - numpy
     - cython
@@ -24,7 +24,7 @@ requirements:
     - setuptools-scm
   run:
     - {{ pin_compatible('udunits2', max_pin='x.x') }}
-    - python >=3.7
+    - python
     - cftime >=1.2
     - {{ pin_compatible('numpy') }}
     - antlr-python-runtime 4.7.2.*
