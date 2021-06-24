@@ -1,4 +1,4 @@
-{% set version = "2.1.5" %}
+{% set version = "3.0.0" %}
 
 package:
   name: cf-units
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/c/cf-units/cf-units-{{ version }}.tar.gz
-  sha256: d43381d3ee4e3b01ceb29050ea9b5e1bba3bb28d9d5846dff71870162cbc5c33
+  sha256: adb8148294332e00e46a3b7b15ee1fb4d1231f8d23276b6290d64b1ecf2539d0
 
 build:
   number: 0
