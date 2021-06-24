@@ -1,4 +1,4 @@
-{% set name = "nc-time-axis" %}
+{% set name = "cf-units" %}
 {% set version = "3.0.0" %}
 
 package:
