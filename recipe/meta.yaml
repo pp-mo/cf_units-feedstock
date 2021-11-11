@@ -1,4 +1,4 @@
-{% set name = "cf-units" %}
+z% set name = "cf-units" %}
 {% set version = "3.0.1" %}
 
 package:
@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 9aefa5d16235d0e7110f83873270d502cb9b6fe07fc8cb472999d813a155eae2
-  patches:
-    - setup.patch  # [win]
 
 build:
   number: 1
