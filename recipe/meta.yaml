@@ -1,4 +1,4 @@
-z% set name = "cf-units" %}
+{% set name = "cf-units" %}
 {% set version = "3.0.1" %}
 
 package:
