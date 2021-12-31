@@ -10,12 +10,17 @@ source:
   sha256: 9aefa5d16235d0e7110f83873270d502cb9b6fe07fc8cb472999d813a155eae2
 
 build:
-  number: 1
+  number: 2
   skip: True  # [py<37]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
+ 
   host:
     - python
     - pip
