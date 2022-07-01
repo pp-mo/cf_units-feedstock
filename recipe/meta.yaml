@@ -1,5 +1,5 @@
 {% set name = "cf-units" %}
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9aefa5d16235d0e7110f83873270d502cb9b6fe07fc8cb472999d813a155eae2
+  sha256: f68d2235e0f29939d9fa7d221cc92cb445c116fd34f1f84f9bc7ebdae267300d
 
 build:
-  number: 2
+  number: 0
   skip: True  # [py<37]
 
 requirements:
@@ -44,8 +44,7 @@ test:
     - cf_units
   commands:
     - pip check
-    # remove the tests exclusion when https://github.com/SciTools/cf-units/pull/207 is merged
-    - pytest --pyargs cf_units -k "not (test_unit_power or test_unit_power or test_unit_power)"
+    - pytest --pyargs cf_units
 
 about:
   home: https://cf-units.readthedocs.io/en/latest/
