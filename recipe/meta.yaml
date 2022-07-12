@@ -1,5 +1,5 @@
 {% set name = "cf-units" %}
-{% set version = "3.1.0" %}
+{% set version = "3.1.1" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f68d2235e0f29939d9fa7d221cc92cb445c116fd34f1f84f9bc7ebdae267300d
+  sha256: d402b5a54c46b8ad2fb4fd815a054520c36ee7b483e4c9555e4b45b62af7558b
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
   run:
     - {{ pin_compatible('udunits2', max_pin='x.x') }}
     - python
-    - cftime >=1.2
+    - cftime >=1.5.2
     - {{ pin_compatible('numpy') }}
     - antlr-python-runtime 4.7.2.*
     - jinja2
@@ -50,7 +50,7 @@ about:
   home: https://cf-units.readthedocs.io/en/latest/
   license: LGPL-3.0-or-later
   license_file: COPYING.LESSER
-  summary: Units of measure as required by the Climate and Forecast (CF) metadata conventions.
+  summary: Units of measure as required by the Climate and Forecast (CF) Metadata Conventions.
 
 extra:
   recipe-maintainers:
