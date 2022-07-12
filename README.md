@@ -7,7 +7,7 @@ Package license: LGPL-3.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cf_units-feedstock/blob/main/LICENSE.txt)
 
-Summary: Units of measure as required by the Climate and Forecast (CF) metadata conventions.
+Summary: Units of measure as required by the Climate and Forecast (CF) Metadata Conventions.
 
 Current build status
 ====================
