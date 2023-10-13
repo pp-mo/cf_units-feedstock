@@ -12,7 +12,7 @@ source:
     - backport_368.patch
 
 build:
-  number: 2
+  number: 3
   skip: True  # [py<=38]
 
 requirements:
