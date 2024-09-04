@@ -15,7 +15,7 @@ source:
     - backport_427.patch
 
 build:
-  number: 5
+  number: 6
   skip: True  # [py<=38]
 
 requirements:
